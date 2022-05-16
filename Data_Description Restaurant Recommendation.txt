@@ -1,0 +1,53 @@
+Ada ~ 10.000 customer dalam dataset ini. customer ini yang diperlukan untuk merekomendasikan vendor. Setiap customer dapat memesan dari beberapa lokasi.
+
+
+# Customers
+- 'customer_id': identitas unik customer, digunakan untuk mengakses data locations dan orders
+- 'gender': jenis kelamin customer
+- 'dob': Tahun lahir 
+- 'status' and 'verified': Status Akun
+- 'Created_at' and 'updated_at': waktu ketika akun dibuat dan diupdate
+
+
+# Locations
+Setiap customer bisa memesan dari satu atau lebih lokasi. Masing-masing diberi nomor lokasi. 
+- 'customer_id': identitas unik customer 
+- 'location_number': Nomor lokasi (kebanyakan customer memiliki nomor satu atau dua)
+- 'Latitude' and 'longitude': menujukkan lokasi (bukan lokasi sebenarnya karena lokasi telah disamarkan)
+
+# Orders
+Ini adalah catatan dari semua pesanan customer dalam dataset dari vendor. Setiap pesanan berisi:
+- 'order_id': identitas unik pesanan 
+- 'customer_id': identitas unik customer (digunakan untuk menghubungkan dataset customer)
+- 'item_count': banyaknya item yang dipesan
+- 'grand_total': total biaya
+- 'payment_mode' : metode pembayaran (kategorik) 
+- 'is_favorite' : item favorit dari vendor 
+- 'is_rated': item yang dinilai
+- 'driver_rating' : rating pengemudi
+- 'deliverydistance' : jarak pengiriman
+- 'created_at' : waktu pemesanan
+- 'vendor_id': identitas unik vendor
+- 'LOCATION_NUMBER': Nomor lokasi menentukan lokasi customer mana yang menjadi tujuan pengiriman
+
+# vendor
+- id : identitas unik vendor
+- authentication_id : identitas otentikasi
+- latitude : lokasi pelanggan (garis Lintang)
+- longitude : lokasi pelanggan (garis Bujur)
+- vendor_category_en : kategori vendor (Restaurants dan Sweets & Bakes)
+- delivery_charge : biaya pengiriman
+- serving_distance : jarak pelayanan
+- is_open : -
+- OpeningTime : waktu buka
+- prepration_time : waktu persiapan (menit)
+- discount_percentage : persentase diskon
+- status : -
+- verified : -
+- rank : -
+- vendor_rating	: rating dari vendor skala(0 s/d 5)
+- vendor_tag : menunjukkan label dari vendor
+- vendor_tag_name : menunjukkan nama label vendor
+- created_at : waktu dibuat
+- updated_at :	waktu diupdate
+- device_type : tipe device yg digunakan
